@@ -1,22 +1,25 @@
 <div class="container">
 
     <div class="jumbotron">
-        <h1>Create a burger</h1>
+       <img src="/assets/img/maxresdefault.jpg" class="img-responsive fit-image">
+        <h1>Themed custom order</h1>
         <panel>
 
             <div class="input-group mb-3">
-              <form class="create-form">  <input type="text"  data-placeholder="" id="newburger" name="burger" aria-describedby="basic-addon2">
-  <div class="input-group-append">
-    <button type="submit" class="btn btn-success" id="addburger">Create</button>
-  </div></form>
+                <form class="create-form"> <input type="text" data-placeholder="" id="newburger" name="burger"
+                        aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                        <button type="submit" class="btn btn-success" id="addburger">Create</button>
+                    </div>
+                </form>
 
-</div>
+            </div>
         </panel>
     </div>
     <div class="row">
         <div class="col-sm-6">
             <div class="panel panel-default">
-                <div class="panel-heading" id="leftside"><strong>Select from Your Burger Wishlist</strong>
+                <div class="panel-heading" id="leftside"><strong>Select from menu</strong>
                     <p>Ready to eat!</p>
                 </div>
                 <div class="panel-body">
@@ -38,15 +41,15 @@
         </div>
         <div class="col-sm-6">
             <div class="panel panel-default">
-                <div class="panel-heading" id="rightside"><strong>The burgers you have eaten...</strong>
-                    <p>if you want to forget the fact that you ate any...just trash it</p>
+                <div class="panel-heading" id="rightside"><strong>The stuff you have ordered...</strong>
+                    <p>if you want to forget the fact that you have over orderd ..just trash it</p>
                 </div>
                 <div class="panel-body">
                     <ul>
                         {{#each burgers}}
                         {{#if devoured}}
                         <span><strong> {{this.id}} - {{this.burger_name}}</strong></span>
-                        <button type="button" class="trashBurger btn btn-danger"  data-id="{{this.id}}"
+                        <button type="button" class="trashBurger btn btn-danger" data-id="{{this.id}}"
                             data-newDevoured="{{devour}}"><span class="fa fa-trash"></span></button>
                         <hr>
                         {{/if}}
@@ -60,6 +63,5 @@
         </div>
 
     </div>
-    <!--endrow -->
+
 </div>
-<!--endcontainer -->

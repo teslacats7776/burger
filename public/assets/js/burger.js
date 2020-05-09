@@ -37,7 +37,7 @@ $(function () {
     });
     $(".trashBurger").on("click",function(event){
     event.preventDefault();
-    alert("line3");
+    // alert("line3");
     var id=$(this).data("id");
     var state = {
         devoured:1
